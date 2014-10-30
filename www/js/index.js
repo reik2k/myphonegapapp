@@ -16,6 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+ //FUNCIONES GLOBALES
+ function getElementValue(id)
+ {
+	return document.getElementById(id).value;
+ }
+ function getElement(id)
+ {
+	return document.getElementById(id);
+ }
 var app = {
     // Application Constructor
     initialize: function() {
@@ -45,5 +55,47 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+	findPeople:function()
+	{
+		// find all contacts with any name field
+		var name 	= getElementValue('inpName');
+		
+		if(name == '')
+		{
+			alert('Please, You might type a name; ' + name);
+			
+		}else{
+			var options = new ContactFindOptions();
+			var fields = ["displayName","name"];
+			
+			options.filter 		= name;
+			options.multiple 	= true;
+			navigator.contacts.find(fields, this.onSuccess, this.onError, options);
+		}
+	},
+	
+	// onSuccess: Get a snapshot of the current contacts
+	onSuccess:function (contacts) 
+	{
+		var body = getElement('res');
+		var input = getElement('inpName');
+		var lista = '';
+		
+		if( contacts.length != 0)
+		{
+			for (var i = 0; i < contacts.length; i++) 
+			{
+				lista = lista + '<li>' + contacts[i].displayName + '</li>';
+			}
+			lista = '<ul>' + lista + '</ul>';
+		}else{ lista= '<strong>Non results</strong>';}
+		
+		input.value = '';
+		body.innerHTML = '<br/>' + lista;
+	},
+	// onError: Failed to get the contacts
+	onError:function (code) {
+		alert('onError! ' + code);
+	}
 };
