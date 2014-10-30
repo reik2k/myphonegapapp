@@ -1,6 +1,5 @@
 ### PHONEGAP FILES IGNORING
 /.cordova
-/platforms
 
 ##ANDROID SDK FILES IGNORING
 
