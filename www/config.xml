@@ -8,6 +8,16 @@
         PhoneGap Team
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
+    <!--
+	    PLUGINS
+    -->
+    <feature name="File">
+    	<param name="android-package" value="org.apache.cordova.file.FileUtils" />
+	</feature>
+	<feature name="FileTransfer">
+	    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+	</feature>
+	
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
