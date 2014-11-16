@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="org.insags.myphonegapapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>My PhoneGap App</name>
+    <name>Ejercicio 2</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Tema 8 Ejercicio 2
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
@@ -11,12 +11,12 @@
     <!--
 	    PLUGINS
     -->
-    <feature name="File">
+    <!--feature name="File">
     	<param name="android-package" value="org.apache.cordova.file.FileUtils" />
 	</feature>
 	<feature name="FileTransfer">
 	    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
-	</feature>
+	</feature-->
 	
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
