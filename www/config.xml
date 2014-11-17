@@ -17,9 +17,9 @@
 	<feature name="FileTransfer">
 	    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
 	</feature-->
-	<feature name="SplashScreen">
+	<!--feature name="SplashScreen">
     	<param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-	</feature>
+	</feature-->
 	<!--feature name="Media">
 	    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
 	</feature-->
@@ -29,6 +29,9 @@
 	<feature name="Vibration">
 	    <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
 	</feature>
+	<feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+    </feature>
 	
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />

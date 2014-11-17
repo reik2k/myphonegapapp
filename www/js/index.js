@@ -34,7 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        navigator.notification.vibrate(2000);
+        window.addEventListener('batterystatus',batteryStatus,false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -46,5 +46,22 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
 };
+var statusdiv = document.getElementById('status');
+var drawStatus = function(info)
+{
+  	var s = "<br/><h1><b>Battery Status</b></h1><br/>";
+    s += "<h2>Level is</h2> <p>"+info.level + "</p><br/>";
+    s += "<h2>Plugged in is </h2><p>"+info.isPlugged;
+    s += "</p>";
+    statusdiv.innerHTML = s;
+};
+
+var batteryStatus = function(info)
+{
+	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+	navigator.notification.vibrate(2000); 
+	drawStatus(info);
+};
+
