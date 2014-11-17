@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="org.insags.myphonegapapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Ejercicio 2</name>
+    <name>Ejercicio X</name>
     <description>
-        Tema 8 Ejercicio 2
+        Tema X Ejercicio X
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
@@ -17,6 +17,18 @@
 	<feature name="FileTransfer">
 	    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
 	</feature-->
+	<feature name="SplashScreen">
+    	<param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+	</feature>
+	<!--feature name="Media">
+	    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+	</feature-->
+	<feature name="Notification">
+	    <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+	</feature>
+	<feature name="Vibration">
+	    <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+	</feature>
 	
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
